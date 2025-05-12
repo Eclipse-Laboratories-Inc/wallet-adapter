@@ -29,7 +29,7 @@
     "dependencies": {
         "@solana/wallet-adapter-base": "workspace:^",
         "@solana/wallet-adapter-react": "workspace:^",
-        "@solana/wallet-adapter-react-ui": "workspace:^",
+        "@eclipse-laboratories-inc/wallet-adapter-react-ui": "workspace:^",
         "@solana/wallet-adapter-wallets": "workspace:^",
         "@solana/web3.js": "^1.77.3",
         "react": "^18.2.0",

@@ -1,12 +1,12 @@
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { WalletModalProvider, WalletMultiButton } from '@eclipse-laboratories-inc/wallet-adapter-react-ui';
 import { UnsafeBurnerWalletAdapter } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 import React, { FC, ReactNode, useMemo } from 'react';
 
 require('./App.css');
-require('@solana/wallet-adapter-react-ui/styles.css');
+require('@eclipse-laboratories-inc/wallet-adapter-react-ui/styles.css');
 
 const App: FC = () => {
     return (

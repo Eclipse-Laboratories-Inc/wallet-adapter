@@ -1,8 +1,8 @@
 {
     "private": true,
-    "name": "@solana/wallet-adapter",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/solana-labs/wallet-adapter",
+    "name": "@eclipse-laboratories-inc/wallet-adapter",
+    "author": "Eclipse Laboratories Inc.",
+    "repository": "https://github.com/Eclipse-Laboratories-Inc/wallet-adapter",
     "license": "Apache-2.0",
     "engines": {
         "node": ">=16",
