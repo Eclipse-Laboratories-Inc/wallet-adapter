@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "@eclipse/wallet-adapter",
+    "name": "@eclipse-laboratories-inc/wallet-adapter",
     "author": "Eclipse Laboratories Inc.",
     "repository": "https://github.com/Eclipse-Laboratories-Inc/wallet-adapter",
     "license": "Apache-2.0",

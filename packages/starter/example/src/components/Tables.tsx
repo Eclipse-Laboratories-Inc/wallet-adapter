@@ -6,7 +6,7 @@ import {
     WalletDisconnectButton,
     WalletModalButton,
     WalletMultiButton,
-} from '@eclipse/wallet-adapter-react-ui';
+} from '@eclipse-laboratories-inc/wallet-adapter-react-ui';
 
 import pkg from '../../package.json';
 import { SendLegacyTransaction } from '../components/SendLegacyTransaction';
