@@ -1,8 +1,8 @@
 {
     "private": true,
-    "name": "@solana/wallet-adapter",
-    "author": "Solana Maintainers <maintainers@solana.foundation>",
-    "repository": "https://github.com/anza-xyz/wallet-adapter",
+    "name": "@eclipse-laboratories-inc/wallet-adapter",
+    "author": "Eclipse Laboratories Inc.",
+    "repository": "https://github.com/Eclipse-Laboratories-Inc/wallet-adapter",
     "license": "Apache-2.0",
     "engines": {
         "node": ">=20",
@@ -13,7 +13,7 @@
     "sideEffects": false,
     "scripts": {
         "corepack": "corepack enable && corepack prepare pnpm@10.8.1 --activate && corepack use pnpm@10.8.1",
-        "nuke": "shx rm -rf packages/*/*/node_modules node_modules pnpm-lock.yaml || true",
+        "nuke": "shx rm -rf packages/*/*/node_modules node_modules || true",
         "reinstall": "pnpm run nuke && pnpm install",
         "clean": "pnpm --recursive --workspace-concurrency=0 run clean && shx rm -rf **/*.tsbuildinfo",
         "build": "turbo run build --concurrency=100%",
@@ -55,7 +55,8 @@
         "@solana/wallet-adapter-base": "workspace:^",
         "eslint": "8.22.0",
         "@ngraveio/bc-ur": "1.1.12",
-        "@types/web": "npm:typescript@^5.8.3"
+        "@types/web": "npm:typescript@^5.8.3",
+        "@solana-mobile/wallet-adapter-mobile": "2.1.5"
     },
     "resolutions": {
         "@solana/wallet-adapter-base": "workspace:^",

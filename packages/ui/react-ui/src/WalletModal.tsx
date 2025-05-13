@@ -10,6 +10,9 @@ import { WalletListItem } from './WalletListItem.js';
 import { WalletSVG } from './WalletSVG.js';
 import { useWalletModal } from './useWalletModal.js';
 
+// List of supported wallet names
+const SUPPORTED_WALLETS = ['Backpack', 'Nightly', 'Salmon', 'Bitget Wallet', 'OKX Wallet', 'Bybit Wallet'];
+
 export interface WalletModalProps {
     className?: string;
     container?: string;
@@ -27,7 +30,11 @@ export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 
         const installed: Wallet[] = [];
         const notInstalled: Wallet[] = [];
 
-        for (const wallet of wallets) {
+        const supportedAvailableWallets = wallets
+            .filter((w) => SUPPORTED_WALLETS.includes(w.adapter.name))
+            .sort((a, b) => a.adapter.name.localeCompare(b.adapter.name));
+
+        for (const wallet of supportedAvailableWallets) {
             if (wallet.readyState === WalletReadyState.Installed) {
                 installed.push(wallet);
             } else {
@@ -136,7 +143,7 @@ export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 
                         </button>
                         {listedWallets.length ? (
                             <>
-                                <h1 className="wallet-adapter-modal-title">Connect a wallet on Solana to continue</h1>
+                                <h1 className="wallet-adapter-modal-title">Connect an Eclipse wallet to continue</h1>
                                 <ul className="wallet-adapter-modal-list">
                                     {listedWallets.map((wallet) => (
                                         <WalletListItem
@@ -184,7 +191,7 @@ export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 
                         ) : (
                             <>
                                 <h1 className="wallet-adapter-modal-title">
-                                    You'll need a wallet on Solana to continue
+                                    You'll need a wallet on Eclipse to continue
                                 </h1>
                                 <div className="wallet-adapter-modal-middle">
                                     <WalletSVG />

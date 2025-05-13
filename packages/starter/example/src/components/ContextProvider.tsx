@@ -3,7 +3,7 @@ import { deepPurple, pink } from '@mui/material/colors';
 import type { Adapter, WalletError } from '@solana/wallet-adapter-base';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
+import { WalletModalProvider } from '@eclipse-laboratories-inc/wallet-adapter-react-ui';
 import { UnsafeBurnerWalletAdapter } from '@solana/wallet-adapter-wallets';
 import { type SolanaSignInInput } from '@solana/wallet-standard-features';
 import { verifySignIn } from '@solana/wallet-standard-util';

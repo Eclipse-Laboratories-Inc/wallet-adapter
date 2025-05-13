@@ -145,6 +145,9 @@ importers:
 
   packages/starter/example:
     dependencies:
+      '@eclipse-laboratories-inc/wallet-adapter-react-ui':
+        specifier: workspace:^
+        version: link:../../ui/react-ui
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@18.3.20)(react@18.3.1)
@@ -166,9 +169,6 @@ importers:
       '@solana/wallet-adapter-react':
         specifier: workspace:^
         version: link:../../core/react
-      '@solana/wallet-adapter-react-ui':
-        specifier: workspace:^
-        version: link:../../ui/react-ui
       '@solana/wallet-adapter-wallets':
         specifier: workspace:^
         version: link:../../wallets/wallets
@@ -224,15 +224,15 @@ importers:
 
   packages/starter/react-ui-starter:
     dependencies:
+      '@eclipse-laboratories-inc/wallet-adapter-react-ui':
+        specifier: workspace:^
+        version: link:../../ui/react-ui
       '@solana/wallet-adapter-base':
         specifier: workspace:^
         version: link:../../core/base
       '@solana/wallet-adapter-react':
         specifier: workspace:^
         version: link:../../core/react
-      '@solana/wallet-adapter-react-ui':
-        specifier: workspace:^
-        version: link:../../ui/react-ui
       '@solana/wallet-adapter-wallets':
         specifier: workspace:^
         version: link:../../wallets/wallets
