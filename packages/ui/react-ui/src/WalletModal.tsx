@@ -10,6 +10,9 @@ import { WalletListItem } from './WalletListItem.js';
 import { WalletSVG } from './WalletSVG.js';
 import { useWalletModal } from './useWalletModal.js';
 
+// List of supported wallet names
+const SUPPORTED_WALLETS = ['Backpack', 'Nightly', 'Salmon', 'Bitget Wallet', 'OKX Wallet', 'Bybit Wallet'];
+
 export interface WalletModalProps {
     className?: string;
     container?: string;
@@ -27,12 +30,14 @@ export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 
         const installed: Wallet[] = [];
         const notInstalled: Wallet[] = [];
 
-        for (const wallet of wallets) {
+        const supportedAvailableWallets = wallets
+            .filter((w) => SUPPORTED_WALLETS.includes(w.adapter.name))
+            .sort((a, b) => a.adapter.name.localeCompare(b.adapter.name));
+
+        for (const wallet of supportedAvailableWallets) {
             if (wallet.readyState === WalletReadyState.Installed) {
-                console.log('Installed wallet', wallet.adapter.name);
                 installed.push(wallet);
             } else {
-                console.log('Not installed wallet', wallet.adapter.name);
                 notInstalled.push(wallet);
             }
         }
